@@ -5,6 +5,13 @@ Paper](https://github.com/AgentschapPlantentuinMeise/manuscripts/actions/workflo
 
 A modular, Git-tracked scientific writing workflow using Markdown, Pandoc, and automated Makefile compilation.
 
+### Suggestions
+
+- Maintain AUTHORS.md from day 1 of your project.
+- If you are an author, for the changes obtained through extensive use
+  of AI, start the commit message with `AI`, optionally including the
+  chat history doi as well.
+  
 ## 🛠️ Features
 
 - Write the manuscript in lightweight Markdown (`paper.md`)
@@ -62,12 +69,18 @@ make tex        # Generates LaTeX file only
 make clean      # Cleans build artifacts
 ```
 
-🧑‍🤝‍🧑 Contributions
+## 🧑‍🤝‍🧑 Contributions
 See manuscript/AUTHORS.md for author roles and ORCID IDs.
 
-📜 Citation
+## 📜 Citation
 Please cite this work using the details in CITATION.cff.
 
-🔓 License
+### Inspired by
+
+- [Scientific Markdown](https://github.com/liamtimms/scientific-markdown)
+- [Scientific Writing with Markdown](https://jaantollander.com/post/scientific-writing-with-markdown/)
+- [Copilot](https://copilot.microsoft.com/shares/DnuKFkKtzVqMrRHeVmAoe)
+
+## 🔓 License
 Licensed under Creative Commons Attribution 4.0.
 
