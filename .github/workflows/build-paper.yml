@@ -1,0 +1,52 @@
+name: Build Paper
+
+on:
+  push:
+    paths:
+      - manuscript/**
+      - metadata.yaml
+      - inject-authors.py
+      - Makefile
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pandoc-include
+        run: pip install pandoc-include
+
+      - name: Install Pandoc
+        run: sudo apt-get install -y pandoc
+
+      - name: Inject authors
+        run: python inject-authors.py
+
+      - name: Compile PDF
+        run: make pdf
+
+      - name: Compile DOCX
+        run: make docx
+
+      - name: Compile LaTeX
+        run: make tex
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-paper
+          path: |
+            build/paper.pdf
+            build/paper.docx
+            build/paper.tex

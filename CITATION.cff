@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Your Paper Title"
+authors:
+  - family-names: YourLastName
+    given-names: YourFirstName
+    orcid: https://orcid.org/0000-0000-0000-0000
+    affiliation: "Meise Botanic Garden"
+date-released: 2025-07-24
+version: 0.1.0
+doi: 10.1234/example.doi
+license: CC-BY-4.0
