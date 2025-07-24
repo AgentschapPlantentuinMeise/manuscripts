@@ -16,19 +16,30 @@ A modular, Git-tracked scientific writing workflow using Markdown, Pandoc, and a
 
 ## 🗂️ Project Structure
 
+```text
 your-paper/
 ├── manuscript/
-│
-├── paper.md # Main manuscript in Markdown
-│
-├── AUTHORS.md # Author list and contributions
-│
-├── refs.bib # BibTeX bibliography
-├── metadata.yaml # Document styling and layout
-├── inject-authors.py # Preprocessor script
-├── Makefile # Build automation
-├── build/ # Compiled outputs (ignored by Git)
-└── LICENSE, CITATION.cff # Project metadata
+│   ├── paper.md            # Main manuscript in Markdown
+│   ├── AUTHORS.md          # Author list and contributions
+│   ├── refs.bib            # BibTeX bibliography
+├── metadata.yaml           # Document styling and layout
+├── inject-authors.py       # Preprocessor script
+├── Makefile                # Build automation
+├── build/                  # Compiled outputs (ignored by Git)
+├── figures/                # Diagrams, plots, and illustrations
+│   ├── fig1.svg
+│   ├── fig2.png
+├── data/                   # Optional datasets
+│   ├── raw/                # Original, unprocessed data
+│   ├── processed/          # Cleaned and ready-for-analysis data
+├── scripts/                # Code used for analysis or figure generation
+│   ├── generate_figures.py
+│   ├── stats.R
+├── .gitignore              # Clean up your repo
+├── LICENSE                 # Usage rights
+├── CITATION.cff            # Citation metadata
+└── README.md               # Project overview and instructions
+```
 
 ## 🔧 Requirements
 
