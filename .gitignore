@@ -1,31 +1,34 @@
-# Ignore compiled outputs
+# Build artifacts
 /build/
 *.pdf
 *.docx
 *.tex
+*.html
 
-# Ignore injected manuscript
+# Injected manuscript files
 manuscript/paper.injected.md
 
-# Ignore Python cache and virtual environments (if used)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-env/
-venv/
-
-# Ignore editor-specific files
+# Editor-specific files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Ignore OS-specific files
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
+
+# Quarto build cache (if used)
+.presentation/_freeze/
+.presentation/.quarto/
+
+# OS-specific files
 .DS_Store
 Thumbs.db
 
-# Ignore logs and temp files
+# Temporary or debug logs
 *.log
 *.tmp

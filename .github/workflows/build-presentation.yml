@@ -1,0 +1,36 @@
+name: Build Presentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - presentation/**
+      - shared/figures/**
+      - manuscript/refs.bib
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v1
+        with:
+          version: stable
+
+      - name: Render Quarto slides
+        run: |
+          cd presentation
+          quarto render slides.qmd --output-dir build
+
+      - name: Upload presentation artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: presentation-slides
+          path: presentation/build/
+          

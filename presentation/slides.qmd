@@ -1,0 +1,47 @@
+```yaml
+---
+title: "Title of the Talk"
+author: "[YourFirstName] [YourLastName]"
+date: "2025-07-24"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    incremental: true
+    chalkboard: true
+bibliography: ../manuscript/refs.bib
+csl: ieee.csl
+---
+```
+
+## Introduction
+
+- What is the problem?
+- Why does it matter?
+- How does our work address it?
+
+## Methods
+
+- Brief overview of methodology
+- Key techniques or tools used
+
+## Results
+
+```{r}
+#| fig-cap: "Example plot"
+plot(cars)
+```
+
+## Discussion
+
+- Interpretation of results
+- Limitations and future work
+
+## Takeaway {.highlight}
+
+> One key message you want the audience to remember.
+
+## Acknowledgements
+
+- Collaborators
+- Funding sources

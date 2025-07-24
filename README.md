@@ -22,16 +22,18 @@ your-paper/
 │   ├── paper.md            # Main manuscript in Markdown
 │   ├── AUTHORS.md          # Author list and contributions
 │   ├── refs.bib            # BibTeX bibliography
+├── presentation/
+│   ├── slides.md           # Markdown-based presentation
+│   ├── slides.qmd          # Quarto format (optional)
+│   ├── Makefile            # Build slides into HTML/PDF
+│   └── build/              # Compiled outputs
+├── shared/
+│   ├── figures/            # Reusable diagrams and plots
+│   └── data/               # Reusable data (raw/processed)
 ├── metadata.yaml           # Document styling and layout
 ├── inject-authors.py       # Preprocessor script
 ├── Makefile                # Build automation
 ├── build/                  # Compiled outputs (ignored by Git)
-├── figures/                # Diagrams, plots, and illustrations
-│   ├── fig1.svg
-│   ├── fig2.png
-├── data/                   # Optional datasets
-│   ├── raw/                # Original, unprocessed data
-│   ├── processed/          # Cleaned and ready-for-analysis data
 ├── scripts/                # Code used for analysis or figure generation
 │   ├── generate_figures.py
 │   ├── stats.R
